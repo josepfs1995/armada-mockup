@@ -125,8 +125,8 @@ body{
 } 
 
 .friends-list{
-    min-height: 662px;
-    height: 662px;
+    max-height: 662px;
+    height: 100%;
     overflow: auto;
 }
 
@@ -148,3 +148,7 @@ body{
   .friends-list::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+
+.fullscreen{
+    height:100vh;
+}
