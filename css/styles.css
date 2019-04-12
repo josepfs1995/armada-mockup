@@ -121,7 +121,6 @@ button.navbar-toggler:focus{
     padding: 15px;
     font-size: 20px;
     animation: slide-up 0.8s ease;
-    overflow: auto;
 }
 .footer-message:after {
 	content: '';
@@ -138,10 +137,21 @@ button.navbar-toggler:focus{
 	margin-bottom: -10px;
 }
 
-
 .shade-container{
     background: #ffffff21;
 }
+
+.blur{
+    position: fixed;
+    height: 100vh;
+    width: 340px;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+}
+
 .profile-icons-text{
     font-size: 14px;
 }
@@ -217,4 +227,13 @@ button.navbar-toggler:focus{
     position: absolute;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.player:hover{
+    background: #ffffff21;
+    cursor: pointer;
+}
+
+.player{
+    padding: 15px 10px 15px 10px;
 }
