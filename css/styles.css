@@ -11,6 +11,7 @@ body{
 .navbar .nav-item a{
     color:rgb(160, 160, 160);
     border-bottom: 3px solid transparent;
+    font-size: 20px;
 }
 
 .navbar .nav-item a:hover{
@@ -53,7 +54,7 @@ body{
 }
 
 .text-armada{
-    color:#cc99cc;
+    color:#ffffff;
 }
 
 .dot {
@@ -85,5 +86,65 @@ body{
     font-size: 14px;
 }
 
-    
+.dropdown-toggle::after {
+    display: none;
+}
 
+.search-friends{
+    background-color: black;
+    border-color: transparent;
+    border-radius: 20px;
+}
+
+.search-friends:focus{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: black;
+    border-color: transparent;
+    color: white;
+}
+
+.presence-friends{
+    height: 45px;
+    width: 45px;
+    position: relative;
+}
+
+.dot-friends {
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+    border: 2px solid black;
+    background: greenyellow;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+} 
+.dot-off {
+    background: gray;
+} 
+
+.friends-list{
+    min-height: 662px;
+    height: 662px;
+    overflow: auto;
+}
+
+.friends-list::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  .friends-list::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  .friends-list::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  .friends-list::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
