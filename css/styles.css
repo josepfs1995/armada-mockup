@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 body{
     font-family: 'Roboto Condensed', sans-serif;
     color:white;
@@ -92,7 +104,40 @@ button.navbar-toggler:focus{
     height:50px;
     background:url('../img/armada-cuy-mini.png') no-repeat bottom right;
     background-size:100%;
+    z-index: 100;
 }
+
+.footer-message{
+    position: fixed;
+    left: 25px;
+    bottom: 60px;
+    margin: 0;
+    min-height: 100px;
+    max-height: 400px;
+    width: 335px;
+    background: #ffffff35;
+    z-index: 200;
+    border-radius: 3px;
+    padding: 15px;
+    font-size: 20px;
+    animation: slide-up 0.8s ease;
+    overflow: auto;
+}
+.footer-message:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-top-color: #ffffff35;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -5px;
+	margin-bottom: -10px;
+}
+
 
 .shade-container{
     background: #ffffff21;
@@ -148,22 +193,22 @@ button.navbar-toggler:focus{
     overflow: auto;
 }
 
-.friends-list::-webkit-scrollbar {
+.friends-list::-webkit-scrollbar, .footer-message::-webkit-scrollbar {
     width: 5px;
   }
   
   /* Track */
-  .friends-list::-webkit-scrollbar-track {
+  .friends-list::-webkit-scrollbar-track, .footer-message::-webkit-scrollbar-track {
     background: #f1f1f1; 
   }
    
   /* Handle */
-  .friends-list::-webkit-scrollbar-thumb {
+  .friends-list::-webkit-scrollbar-thumb, .footer-message::-webkit-scrollbar-thumb{
     background: #888; 
   }
   
   /* Handle on hover */
-  .friends-list::-webkit-scrollbar-thumb:hover {
+  .friends-list::-webkit-scrollbar-thumb:hover, .footer-message::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
 
@@ -176,4 +221,33 @@ button.navbar-toggler:focus{
 
 .notice{
     margin-top:30px;
+}
+.best-player{
+    background-color:rgba(255,0,0);
+}
+.list-map{
+    min-width:280px;
+}
+.details-map{
+    background-color: rgba(255,0,0,0.4);
+    border-bottom-color: rgba(255,255,255,0.6);
+    min-width:280px;
+}
+.img-map{
+    max-height:240px;
+    max-width: 180px;
+}
+
+.prueba > .row {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.prueba > .row > .list-map{
+  display: inline-block;
+  float: none;
+}
+@media (max-width: 320px) {
+    .container-map{
+        min-width:244px;
+    }
 }
