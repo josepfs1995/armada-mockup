@@ -121,7 +121,6 @@ button.navbar-toggler:focus{
     padding: 15px;
     font-size: 20px;
     animation: slide-up 0.8s ease;
-    overflow: auto;
 }
 .footer-message:after {
 	content: '';
@@ -138,10 +137,23 @@ button.navbar-toggler:focus{
 	margin-bottom: -10px;
 }
 
-
 .shade-container{
-    background: #ffffff21;
+    /*background: #ffffff21;*/
 }
+
+.blur{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    background: #88888821;
+    border-radius: 0;
+}
+
 .profile-icons-text{
     font-size: 14px;
 }
@@ -245,6 +257,15 @@ button.navbar-toggler:focus{
 .prueba > .row > .list-map{
   display: inline-block;
   float: none;
+}
+.player:hover{
+    background: #ffffff21;
+    cursor: pointer;
+}
+
+.player{
+    padding: 15px 10px 15px 10px;
+    transition-duration:650ms; 
 }
 @media (max-width: 320px) {
     .container-map{
